@@ -12,7 +12,7 @@ import wind_icon from '../assets/wind.svg';
 
   const search= async(city)=>{
     if(city !== ''){
-      const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      const url = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
       try {
         const response=await fetch(url);
         const data=await response?.json();
